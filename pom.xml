@@ -12,7 +12,6 @@
     <maven.compiler.target>1.6</maven.compiler.target>
     <spring.version>3.2.3.RELEASE</spring.version>
     <spring.security.version>3.1.4.RELEASE</spring.security.version>
-    <j2ep.version>1.2-securityproxy-master</j2ep.version>
     <geotools.version>9.5</geotools.version>
   </properties>
 
@@ -88,7 +87,7 @@
       <dependency>
         <groupId>de.latlon</groupId>
         <artifactId>j2ep</artifactId>
-        <version>${j2ep.version}</version>
+        <version>${project.version}</version>
       </dependency>
       <!-- Servlet API -->
       <dependency>
@@ -205,49 +204,11 @@
   </scm>
 
   <repositories>
-    <repository>
-      <id>latlon-repo</id>
-      <url>http://repo.lat-lon/nexus/content/groups/public/</url>
-    </repository>
-    <repository>
-      <id>j2ep-releases</id>
-      <url>http://repo.lat-lon/nexus/content/repositories/j2ep-release/</url>
-    </repository>
-    <repository>
-      <id>j2ep-snapshots</id>
-      <url>http://repo.lat-lon/nexus/content/repositories/j2ep-snapshots/</url>
-    </repository>
-    <repository>
-      <id>secproxy-releases</id>
-      <url>http://repo.lat-lon/nexus/content/repositories/deegree-securityproxy/</url>
-    </repository>
-    <repository>
-      <id>secproxy-snapshots</id>
-      <url>http://repo.lat-lon/nexus/content/repositories/deegree-securityproxy-snapshots/</url>
-    </repository>
-    <repository>
+   <repository>
       <id>opengeo</id>
       <url>http://repo.opengeo.org/</url>
     </repository>
   </repositories>
-
-  <distributionManagement>
-    <repository>
-      <id>secproxy-releases</id>
-      <url>http://repo.lat-lon/nexus/content/repositories/deegree-securityproxy/</url>
-    </repository>
-    <snapshotRepository>
-      <id>secproxy-snapshots</id>
-      <url>http://repo.lat-lon/nexus/content/repositories/deegree-securityproxy-snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
-
-  <pluginRepositories>
-    <pluginRepository>
-      <id>latlon-repo</id>
-      <url>http://repo.lat-lon/nexus/content/groups/public/</url>
-    </pluginRepository>
-  </pluginRepositories>
 
   <modules>
     <module>deegree-securityproxy-authentication</module>
@@ -261,6 +222,7 @@
     <module>deegree-securityproxy-service-wfs</module>
     <module>deegree-securityproxy-service-wps</module>
     <module>deegree-matcher</module>
+    <module>j2ep</module>
   </modules>
 
 </project>
